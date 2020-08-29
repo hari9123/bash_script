@@ -1,0 +1,55 @@
+### These are conditionals
+-d : True if directory exist
+-e : True if file exist
+-f : True if normal file exists
+-r : True if you are able to read file
+-w : True if you are able to write file
+-x : True if the file is executed by you
+
+## with string
+-z string : True if string is empty
+-n string : True if string is not empty
+
+string1=string2 : True if both are equal
+string1!=string2 :True if both are not equal
+
+-eq : To compare if two numbers are equal
+-ne : To compare if two numbers are not equal
+-gt : To compare if 1st number is greater than 2nd
+-ge : To compare if 1st number is gre/eql to 2nd
+-le : To compare if 1st number is les/eql to 2nd
+-lt : To compare if 1st number is lessthan 2nd
+
+##Positional Parameter
+=============================
+#### ./script.sh aug1 aug2 aug3 ## 1st par: aug1; 2nd par: aug2; 3rd par: aug3####
+$0 : "script itself"
+$1 : "1st Parameter"
+$2 : "2nd Parameter"
+$3 : "3rd Parameter"
+.
+.
+.
+$9 : "............."
+$@ : "mul Parameter"
+$? : "To know the last executed command status" #if status is "0" then command is success
+#The status varies from "0-255; >0 there is some error"
+$$ : "PID of current process"
+$# : "Is the no.of arguments in $*"
+$* : "All arguments passwd to the script"
+=============================
+##Logical signs for Exit status #decision making on if conditional statements
+
+&& : AND 
+|| : OR
+
+exit 1; To exit the script with return code 1
+exit 0; To exit the script with return code 0
+
+============================
+echo -n "Please provide the aug: "
+read aug
+(or)
+read -p "Please provide aug: " aug
+
+
